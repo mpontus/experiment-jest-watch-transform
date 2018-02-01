@@ -1,0 +1,17 @@
+{
+  "name": "experiment-jest-watch-transform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "jest": "jest"
+  },
+  "devDependencies": {
+    "jest": "^22.1.4"
+  },
+  "jest": {
+    "transform": {
+      "\\.txt$": "./transform-txt"
+    }
+  }
+}

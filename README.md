@@ -6,6 +6,20 @@ Ordinarily when jest is invoked with `--watch` option, the test run will trigger
 
 As this example demonstrates, the expected behavior fails when custom transform script is used on the required file with the extension other than `.js` or `.json`.
 
+## Solution
+
+Solution is to include the file extension used for transformation in [`moduleFileExtensions`](https://facebook.github.io/jest/docs/en/configuration.html#modulefileextensions-array-string) configuration property.
+
+```diff
+     "jest": "^22.1.4"
+   },
+   "jest": {
++    "moduleFileExtensions": ["txt", "js"],
+     "transform": {
+       "\\.txt$": "./transform-txt"
+     }
+```
+
 ## Install
 
 ```
